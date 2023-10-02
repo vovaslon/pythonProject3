@@ -13,15 +13,8 @@ def sort_by():
     for operation in operations:
         if operation.get("state") == "EXECUTED":
             done_operatinos.append(operation)
-    done_operatinos.sort(key=lambda dictionary: dictionary['date'])
-    done_operatinos.reverse()
+    # done_operatinos.sort(key=lambda dictionary: dictionary['date'])
     return done_operatinos
-
-
-def print_5(dict):
-    """выводит 5 позиций из базы"""
-    for i in range(5):
-        print(dict[i])
 
 
 def hide_cardnumbers(card):
@@ -33,13 +26,12 @@ def hide_cardnumbers(card):
 def hide_accountnumbers(account):
     """скрывает номер счета"""
     numbers = account.split()[-1]
-    return f'**{numbers[-4:]}'
+    return f'{account.split()[0]} **{numbers[-4:]}'
 
 
 def date_(date):
     """для отображения даты в нужном формате"""
     date_f = date.split('T')[0]
     return f'{date_f[-2:]}.{date_f[-5:-3]}.{date_f[0:4]}'
-
 
 
