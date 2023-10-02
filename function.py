@@ -1,5 +1,5 @@
 import json
-import datetime
+
 def take_info():
     """получает информацию из базы данных"""
     with open('operation.json', encoding='utf-8') as file:
